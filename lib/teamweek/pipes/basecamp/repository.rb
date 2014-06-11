@@ -3,6 +3,7 @@ module Teamweek
     module Basecamp
       class Repository
         attr_reader :client
+        USER_AGENT = "Teamweek Integration (support@teamweek.com)"
 
         def initialize(options)
           @client = build_client(options)
@@ -12,9 +13,9 @@ module Teamweek
 
         def build_client(options)
           Logan::Client.new(
-            options[:basecamp_id],
+            options[:foreign_workspace_id],
             options[:auth],
-            options[:user_agent]
+            options[:user_agent] || USER_AGENT
           )
         end
       end
