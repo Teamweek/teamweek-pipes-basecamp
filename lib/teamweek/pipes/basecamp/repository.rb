@@ -9,11 +9,11 @@ module Teamweek
           @client = build_client(options)
         end
 
-        private
-
         def pull
            pull_data.map{|item| map_data(item)}
         end
+
+        private
 
         def build_client(options)
           Logan::Client.new(
