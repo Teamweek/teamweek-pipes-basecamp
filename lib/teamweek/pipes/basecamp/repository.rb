@@ -11,6 +11,10 @@ module Teamweek
 
         private
 
+        def pull
+           pull_data.map{|item| map_data(item)}
+        end
+
         def build_client(options)
           Logan::Client.new(
             options[:foreign_workspace_id],

@@ -3,13 +3,13 @@ module Teamweek
     module Basecamp
       class Users < Repository
 
-        def pull
-          client.people.map { |user| map_user(user) }
+        def pull_data
+          client.people
         end
 
         private
 
-        def map_user(user)
+        def map_data(user)
           {
             name: user.name,
             email: user.email_address,
