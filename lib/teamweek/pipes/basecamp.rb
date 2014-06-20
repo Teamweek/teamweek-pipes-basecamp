@@ -9,6 +9,7 @@ module Teamweek
         source.description '...'
 
         source.pipe :users, :users, -> options { Users.new(options).pull }
+        source.pipe :accounts, :accounts, -> options { Accounts.new(options).pull }
       end
     end
   end
