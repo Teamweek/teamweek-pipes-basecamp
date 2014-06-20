@@ -10,13 +10,13 @@ module Teamweek
 
         def pull
            response = client.get('/authorization.json')
-           parse_response(response.parsed)
+           parse_response(response.parsed["accounts"])
         end
 
         private
 
         def parse_response(data)
-          accounts_data["accounts"].map{|item| map_data(item)}.compact
+          data.map{|item| map_data(item)}.compact
         end
 
         def map_data(account)
