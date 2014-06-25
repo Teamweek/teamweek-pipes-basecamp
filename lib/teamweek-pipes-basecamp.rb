@@ -1,4 +1,4 @@
-require 'logan'
+require 'basecamper'
 require 'teamweek/pipes'
 require 'teamweek/pipes/basecamp/repository'
 require 'teamweek/pipes/basecamp/users'
