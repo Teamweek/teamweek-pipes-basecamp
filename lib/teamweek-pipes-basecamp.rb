@@ -1,4 +1,3 @@
-require 'basecamp-ruby'
 require 'teamweek/pipes'
 require 'teamweek/pipes/basecamp/repository'
 require 'teamweek/pipes/basecamp/users'
