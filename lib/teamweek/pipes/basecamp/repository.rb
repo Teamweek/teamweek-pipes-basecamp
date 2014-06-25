@@ -18,7 +18,7 @@ module Teamweek
         def build_client(options)
           ::Basecamp::Client.new(
             options[:http_client],
-            options[:foreign_workspace_id],
+            options[:foreign_workspace_id]
           )
         end
       end
