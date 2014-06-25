@@ -10,6 +10,7 @@ module Teamweek
 
         source.pipe :users, :users, -> options { Users.new(options).pull }
         source.pipe :accounts, :accounts, -> options { Accounts.new(options).pull }
+        source.pipe :projects, :projects, -> options { Projects.new(options).pull }
       end
     end
   end
