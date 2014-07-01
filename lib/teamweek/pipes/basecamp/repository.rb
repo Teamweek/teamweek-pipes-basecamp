@@ -10,7 +10,7 @@ module Teamweek
         end
 
         def pull
-           pull_data.map{|item| map_data(item)}
+           pull_data.map{|item| map_data(item)}.compact
         end
 
         private

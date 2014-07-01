@@ -8,9 +8,10 @@ module Teamweek
         source.name 'Basecamp Next'
         source.description '...'
 
-        source.pipe :users, :users, -> options { Users.new(options).pull }
+        source.pipe :users, :users, -> options { People.new(options).pull }
         source.pipe :accounts, :accounts, -> options { Accounts.new(options).pull }
         source.pipe :projects, :projects, -> options { Projects.new(options).pull }
+        source.pipe :tasks, :todos, -> options { Todos.new(options).pull }
       end
     end
   end

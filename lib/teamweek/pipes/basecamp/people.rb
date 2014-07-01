@@ -1,7 +1,7 @@
 module Teamweek
   module Pipes
     module Basecamp
-      class Users < Repository
+      class People < Repository
 
         def pull_data
           client.people
@@ -9,11 +9,11 @@ module Teamweek
 
         private
 
-        def map_data(user)
+        def map_data(person)
           {
-            name: user.name,
-            email: user.email_address,
-            foreign_id: user.id
+            name: person.name,
+            email: person.email_address,
+            foreign_id: person.id
           }
         end
       end
