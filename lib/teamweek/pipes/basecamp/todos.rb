@@ -31,7 +31,7 @@ module Teamweek
         end
 
         def acceptable_date?(date)
-          return true if !date.nil? && !date.blank? && future?(date)
+          return true if !date.nil? && !date.empty? && future?(date)
         end
 
         def future?(date)
