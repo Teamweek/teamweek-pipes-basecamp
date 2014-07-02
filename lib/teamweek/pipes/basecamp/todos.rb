@@ -6,7 +6,7 @@ module Teamweek
 
         def initialize(opts)
           super
-          @user_ids = opts[:user_ids]
+          @user_ids = opts[:foreign_ids]
         end
 
         def pull_data
