@@ -1,27 +1,39 @@
+GIT
+  remote: https://github.com/Teamweek/basecamp-ruby.git
+  revision: 27a476a61da195aeccc9e9f0dd8d2119481f622d
+  specs:
+    basecamp-ruby (0.0.1)
+
+GIT
+  remote: https://github.com/Teamweek/teamweek-pipes.git
+  revision: 8b80dde4a7b0e38d73f49c48eaa8de33f3448da0
+  specs:
+    teamweek-pipes (0.1.0)
+      teamweek-ruby (~> 0.1.0)
+
 PATH
   remote: .
   specs:
     teamweek-pipes-basecamp (0.1.0)
-      logan
 
 GEM
   remote: https://rubygems.org/
   specs:
-    httparty (0.11.0)
-      multi_json (~> 1.0)
+    httparty (0.13.3)
+      json (~> 1.8)
       multi_xml (>= 0.5.2)
     json (1.8.1)
-    logan (0.0.9)
-      httparty (= 0.11.0)
-      json (~> 1.8)
-    multi_json (1.10.1)
     multi_xml (0.5.5)
     rake (10.3.2)
+    teamweek-ruby (0.1.0)
+      httparty
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  basecamp-ruby!
   bundler (~> 1.6)
   rake
+  teamweek-pipes!
   teamweek-pipes-basecamp!

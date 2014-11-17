@@ -11,14 +11,13 @@ module Teamweek
 
         def pull_data
           user_ids.map do |user_id|
-            client.assigned_todos(user_id)
+            client.assigned_todos(user_id, Date.today.iso8601)
           end.flatten
         end
 
         private
 
         def map_data(todo)
-          return unless acceptable_date?(todo.due_at)
           {
             name: todo.content,
             foreign_id: todo.id,
@@ -28,14 +27,6 @@ module Teamweek
             start_date: todo.due_at,
             end_date: todo.due_at
           }
-        end
-
-        def acceptable_date?(date)
-          return true if !date.nil? && !date.empty? && future?(date)
-        end
-
-        def future?(date)
-          Date.iso8601(date) >= Date.today
         end
       end
     end
