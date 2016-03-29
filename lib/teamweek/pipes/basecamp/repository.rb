@@ -1,4 +1,5 @@
 require 'basecamp-ruby'
+
 module Teamweek
   module Pipes
     module Basecamp
@@ -10,7 +11,7 @@ module Teamweek
         end
 
         def pull
-           pull_data.map{|item| map_data(item)}.compact
+          pull_data.map{|item| map_data(item)}.compact
         end
 
         private
